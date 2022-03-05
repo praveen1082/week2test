@@ -1,5 +1,5 @@
 WITH RECURSIVE data1 AS (
-  SELECT company, LEFT(fiscal_year::TEXT,4)::INT AS year FROM testtable
+  SELECT company, LEFT(fiscal_year::TEXT,4)::INT AS year FROM dividend
 ), data2 AS (
   SELECT data1.company, data1.year, 1 AS datas 
    FROM data1
