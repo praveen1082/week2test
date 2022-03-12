@@ -10,5 +10,5 @@ WITH RECURSIVE data1 AS (
      ON data1.company = data2.company
     AND data1.year = data2.year + 1
 )
-SELECT row_to_json(company) as valuestocks FROM data2
+SELECT array_agg(company::text) FROM data2
 WHERE datas = 3;
