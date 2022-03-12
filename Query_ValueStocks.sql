@@ -10,5 +10,5 @@ WITH RECURSIVE data1 AS (
      ON data1.company = data2.company
     AND data1.year = data2.year + 1
 )
-SELECT array_agg(company::TEXT) FROM data2
+SELECT array_agg(company) as valuestocks FROM data2
 WHERE datas = 3;
